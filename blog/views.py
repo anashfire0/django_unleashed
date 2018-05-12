@@ -23,7 +23,7 @@ class PostCreate(View):
     template_name = 'blog/post_form.html'
 
     def get(self, request):
-        return (request, self.template_name, {'form': self.form_class()})
+        return render(request, self.template_name, {'form': self.form_class()})
 
     def post(self, request):
         bound_data = self.form_class(request.POST)

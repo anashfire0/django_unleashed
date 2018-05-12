@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"slug",
+				"tag_slug"
+			],
+			[
 				"rever",
 				"reverse_lazy"
 			],
@@ -120,14 +124,23 @@
 	"buffers":
 	[
 		{
-			"contents": "(django_unleashed) ash@ash-SVF14A15SNB:~/Desktop/django_unleashed/p  \nects/pro1$ python manage.py shell                                    \n/home/ash/Desktop/django_unleashed/lib/python3.6/site-packages/psyc  \n2/__init__.py:144: UserWarning: The psycopg2 wheel package will be   \named from release 2.8; in order to keep installing from binary plea  \nuse \"pip install psycopg2-binary\" instead. For details see: <http:/  \nitd.org/psycopg/docs/install.html#binary-install-from-pypi>.         \n  \"\"\")                                                               \n0;IPython: projects/pro1Python 3.6.4 (default, Mar  9 2018, 12:57:4  \nType 'copyright', 'credits' or 'license' for more information        \nIPython 6.3.1 -- An enhanced Interactive Python. Type '?' for help.  \n                                                                     \nIn [1]: 52jjk52                                                      \n                                                                     \n",
+			"contents": "In [9]: _                                                                      \nOut[9]: 'augmented reality'                                                    \n                                                                               \nIn [10]: j                                                                     \nOut[10]: 'augmented-reality'                                                   \n                                                                               \nIn [11]: from organizer.models import Tag                                      \n                                                                               \nIn [12]: Tag.objects.all()                                                     \nOut[12]: <QuerySet [<Tag: 1234567890098765432123456789093>, <Tag: 21234567890po\niuytrewqasdfghjkl,>, <Tag: asd>, <Tag: augmented reality>, <Tag: Django>, <Tag:\n Education>, <Tag: hi>, <Tag: Mobile>, <Tag: Video Games>, <Tag: Web>]>        \n                                                                               \nIn [13]:                                                                       \n",
 			"settings":
 			{
-				"buffer_size": 980,
+				"buffer_size": 1120,
 				"line_ending": "Unix",
 				"name": "Terminal",
 				"read_only": true,
 				"scratch": true
+			}
+		},
+		{
+			"file": "organizer/migrations/0003_auto_20180512_0449.py",
+			"settings":
+			{
+				"buffer_size": 704,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -139,27 +152,18 @@
 			}
 		},
 		{
-			"file": "organizer/templates/organizer/startup_list.html",
+			"file": "organizer/migrations/0002_auto_20180512_0442.py",
 			"settings":
 			{
-				"buffer_size": 552,
-				"encoding": "UTF-8",
+				"buffer_size": 618,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "organizer/urls.py",
+			"contents": "(django_unleashed) ash@ash-SVF14A15SNB:~/Desktop/django_unleashed/projects/pro1\n$ python manage.py migrate                                                     \n/home/ash/Desktop/django_unleashed/lib/python3.6/site-packages/psycopg2/__init_\n_.py:144: UserWarning: The psycopg2 wheel package will be renamed from release \n2.8; in order to keep installing from binary please use \"pip install psycopg2-b\ninary\" instead. For details see: <http://initd.org/psycopg/docs/install.html#bi\nnary-install-from-pypi>.                                                       \n  \"\"\")                                                                         \nOperations to perform:                                                         \n  Apply all migrations: admin, auth, blog, contenttypes, organizer, sessions   \nRunning migrations:                                                            \n  Applying organizer.0003_auto_20180512_0449... OK                             \n(django_unleashed) ash@ash-SVF14A15SNB:~/Desktop/django_unleashed/projects/pro1\n$                                                                              \n",
 			"settings":
 			{
-				"buffer_size": 1427,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "dels.py\", line 21, in get_delete_url                                 \n    return reverse('organizer_tag_delete', args=[self.slug])         \n  File \"/home/ash/Desktop/django_unleashed/lib/python3.6/site-package\ns/django/urls/base.py\", line 88, in reverse                          \n    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *ar\ngs, **kwargs))                                                       \n  File \"/home/ash/Desktop/django_unleashed/lib/python3.6/site-package\ns/django/urls/resolvers.py\", line 632, in _reverse_with_prefix       \n    raise NoReverseMatch(msg)                                        \ndjango.urls.exceptions.NoReverseMatch: Reverse for 'organizer_tag_del\nete' with arguments '('ki',)' not found. 1 pattern(s) tried: ['organi\nzer\\\\/tag/(?P<slug>[\\\\w\\\\-]+/delete)/$']                             \n[11/May/2018 12:59:52] \"GET /organizer/tag/ki/ HTTP/1.1\" 500 192777  \n                                                                     \n",
-			"settings":
-			{
-				"buffer_size": 980,
+				"buffer_size": 1120,
 				"line_ending": "Unix",
 				"name": "Terminal",
 				"read_only": true,
@@ -191,9 +195,17 @@
 	"command_palette":
 	{
 		"height": 392.0,
-		"last_filter": "",
+		"last_filter": "remo",
 		"selected_items":
 		[
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
 			[
 				"list",
 				"Package Control: List Packages"
@@ -207,20 +219,12 @@
 				":w - Save"
 			],
 			[
-				"remo",
-				"Package Control: Remove Package"
-			],
-			[
 				"isn",
 				"Package Control: Install Package"
 			],
 			[
 				"lis\t",
 				"Package Control: List Packages"
-			],
-			[
-				"ins",
-				"Package Control: Install Package"
 			],
 			[
 				"insta",
@@ -393,35 +397,41 @@
 	"expanded_folders":
 	[
 		"/home/ash/Desktop/django_unleashed/projects/pro1",
-		"/home/ash/Desktop/django_unleashed/projects/pro1/blog",
-		"/home/ash/Desktop/django_unleashed/projects/pro1/blog/templates",
-		"/home/ash/Desktop/django_unleashed/projects/pro1/blog/templates/blog",
 		"/home/ash/Desktop/django_unleashed/projects/pro1/organizer",
+		"/home/ash/Desktop/django_unleashed/projects/pro1/organizer/migrations",
 		"/home/ash/Desktop/django_unleashed/projects/pro1/organizer/templates",
 		"/home/ash/Desktop/django_unleashed/projects/pro1/organizer/templates/organizer"
 	],
 	"file_history":
 	[
-		"/home/ash/Desktop/django_unleashed/projects/pro1/blog/models.py",
-		"/home/ash/Desktop/django_unleashed/projects/pro1/organizer/views.py",
-		"/home/ash/Desktop/django_unleashed/projects/pro1/blog/urls.py",
-		"/home/ash/Desktop/django_unleashed/projects/pro1/organizer/urls.py",
-		"/home/ash/Desktop/django_unleashed/projects/pro1/organizer/models.py",
-		"/home/ash/Desktop/django_unleashed/projects/pro1/organizer/templates/organizer/startup_list.html",
-		"/home/ash/Desktop/django_unleashed/projects/pro1/organizer/templates/organizer/tag_detail.html",
-		"/home/ash/Desktop/django_unleashed/projects/pro1/organizer/utils.py",
+		"/home/ash/Desktop/django_unleashed/projects/pro1/organizer/migrations/0001_initial.py",
 		"/home/ash/Desktop/django_unleashed/projects/pro1/blog/views.py",
+		"/home/ash/Desktop/django_unleashed/projects/pro1/organizer/migrations/__init__.py",
+		"/home/ash/Desktop/django_unleashed/projects/pro1/blog/templates/blog/post_form.html",
+		"/home/ash/Desktop/django_unleashed/projects/pro1/organizer/utils.py",
+		"/home/ash/Desktop/django_unleashed/projects/pro1/organizer/migrations/0004_0004sdada.py",
+		"/home/ash/Desktop/django_unleashed/projects/pro1/organizer/views.py",
+		"/home/ash/Desktop/django_unleashed/projects/pro1/organizer/migrations/0003_auto_20180512_0204.py",
+		"/home/ash/Desktop/django_unleashed/projects/pro1/blog/urls.py",
+		"/home/ash/Desktop/django_unleashed/projects/pro1/blog/models.py",
+		"/home/ash/Desktop/django_unleashed/projects/pro1/organizer/models.py",
+		"/home/ash/Desktop/django_unleashed/projects/pro1/pro1/settings.py",
+		"/home/ash/Desktop/django_unleashed/projects/pro1/blog/templates/blog/post_detail.html",
+		"/home/ash/.config/sublime-text-3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc.defaults.json",
+		"/home/ash/.config/sublime-text-3/Packages/HTMLBeautify/HTMLBeautify.sublime-settings",
+		"/home/ash/.config/sublime-text-3/Packages/HTML-CSS-JS Prettify/Default (Linux).sublime-keymap",
+		"/home/ash/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/ash/Desktop/django_unleashed/projects/pro1/organizer/templates/organizer/startup_list.html",
+		"/home/ash/Desktop/django_unleashed/projects/pro1/organizer/urls.py",
+		"/home/ash/Desktop/django_unleashed/projects/pro1/organizer/templates/organizer/tag_detail.html",
 		"/home/ash/Desktop/django_unleashed/projects/pro1/organizer/templates/organizer/startup_detail.html",
 		"/home/ash/Desktop/django_unleashed/projects/pro1/blog/templates/blog/post_list.html",
-		"/home/ash/Desktop/django_unleashed/projects/pro1/blog/templates/blog/post_detail.html",
 		"/home/ash/Desktop/django_unleashed/projects/pro1/organizer/templates/organizer/tag_list.html",
 		"/home/ash/Desktop/django_unleashed/projects/pro1/organizer/forms.py",
 		"/home/ash/Desktop/django_unleashed/projects/pro1/blog/forms.py",
 		"/home/ash/Desktop/django_unleashed/projects/pro1/pro1/views.py",
 		"/home/ash/.config/sublime-text-3/Packages/User/ZenTabs.sublime-settings",
-		"/home/ash/Desktop/django_unleashed/projects/pro1/blog/templates/blog/post_form.html",
 		"/home/ash/Desktop/django_unleashed/projects/pro1/organizer/templates/organizer/startup_form.html",
-		"/home/ash/Desktop/django_unleashed/projects/pro1/pro1/settings.py",
 		"/home/ash/Desktop/django_unleashed/projects/pro1/organizer/templates/organizer/tag_form.html",
 		"/home/ash/.config/sublime-text-3/Packages/Anaconda/Default (Linux).sublime-keymap",
 		"/home/ash/Desktop/django_unleashed/projects/pro1/organizer/templates/organizer/newslink_form.html",
@@ -448,7 +458,6 @@
 		"/home/ash/Desktop/django_unleashed/projects/pro1/templates/home.html",
 		"/home/ash/Desktop/django_unleashed/projects/pro1/blog/migrations/0001_initial.py",
 		"/home/ash/.config/sublime-text-3/Packages/User/Anaconda.sublime-settings",
-		"/home/ash/Desktop/django_unleashed/projects/pro1/organizer/migrations/0001_initial.py",
 		"/home/ash/Desktop/django_unleashed/projects/pro1/organizer/admin.py",
 		"/home/ash/Desktop/django_unleashed/projects/pro1/blog/admin.py",
 		"/home/ash/.config/sublime-text-3/Packages/User/PyYapf.sublime-settings",
@@ -461,7 +470,6 @@
 		"/home/ash/.config/sublime-text-3/Packages/PlainTasks/Default (Linux).sublime-keymap",
 		"/home/ash/Desktop/tweetme/src/tweetme/settings/local.py",
 		"/home/ash/.config/sublime-text-3/Packages/User/PlainTasks.sublime-settings",
-		"/home/ash/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
 		"/home/ash/sublime_projects/trial/static-serve",
 		"/home/ash/sublime_projects/trial/src/static-storage",
 		"/home/ash/.config/sublime-text-3/Packages/Origami/Default (Linux).sublime-keymap",
@@ -500,6 +508,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"key",
+			"tagc",
 			"ul",
 			"all",
 			"block",
@@ -538,7 +548,872 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 980,
+						"buffer_size": 1120,
+						"regions":
+						{
+							"12,19":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										0,
+										0
+									]
+								],
+								"scope": "terminalview.black_green"
+							},
+							"12,23":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										0,
+										0
+									]
+								],
+								"scope": "terminalview.black_magenta"
+							},
+							"6,14":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										494,
+										510
+									]
+								],
+								"scope": "terminalview.black_green"
+							}
+						},
+						"selection":
+						[
+							[
+								1049,
+								1049
+							]
+						],
+						"settings":
+						{
+							"SL.17.region_keys":
+							[
+							],
+							"auto_complete": false,
+							"auto_complete_commit_on_tab": false,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"caret_style": "blink",
+							"color_scheme": "Packages/TerminalView/TerminalView.hidden-tmTheme",
+							"default_dir": "/home/ash/Desktop/django_unleashed/projects/pro1",
+							"draw_centered": false,
+							"draw_indent_guides": false,
+							"draw_white_space": "none",
+							"git_gutter_is_enabled": false,
+							"gutter": false,
+							"highlight_line": false,
+							"scroll_past_end": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"terminal_view": true,
+							"terminal_view_activate_args":
+							{
+								"cmd": "/bin/bash -l",
+								"cwd": "/home/ash/Desktop/django_unleashed/projects/pro1",
+								"keep_open": false,
+								"syntax": null,
+								"title": "Terminal"
+							},
+							"terminal_view_last_cursor_pos":
+							[
+								13,
+								9
+							],
+							"terminal_view_scroll": null,
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "organizer/migrations/0003_auto_20180512_0449.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 704,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								296,
+								296
+							]
+						],
+						"settings":
+						{
+							"SL.38.region_keys":
+							[
+							],
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										321,
+										322
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/round_bracket.png",
+										"region.yellowish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										291,
+										292
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										321,
+										322
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/round_bracket.png",
+										"region.yellowish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										291,
+										292
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"color_scheme": "Packages/InactivePanes/Packages/Base16 Color Schemes/Themes/base16-monokai.tmTheme",
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "organizer/models.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2176,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1079,
+								1079
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"color_scheme": "Packages/InactivePanes/Packages/Base16 Color Schemes/Themes/base16-monokai.tmTheme",
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 203.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "organizer/migrations/0002_auto_20180512_0442.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 618,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								236,
+								236
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										616,
+										617
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/square_bracket.png",
+										"region.bluish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										216,
+										217
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										616,
+										617
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/square_bracket.png",
+										"region.bluish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										216,
+										217
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1120,
 						"regions":
 						{
 							"0,19":
@@ -549,6 +1424,42 @@
 									[
 										19,
 										38
+									]
+								],
+								"scope": "terminalview.black_green"
+							},
+							"10,0":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										800,
+										819
+									]
+								],
+								"scope": "terminalview.black_cyan"
+							},
+							"11,47":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										927,
+										930
+									]
+								],
+								"scope": "terminalview.black_green"
+							},
+							"12,19":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										979,
+										998
 									]
 								],
 								"scope": "terminalview.black_green"
@@ -612,812 +1523,36 @@
 									]
 								],
 								"scope": "terminalview.black_blue"
-							}
-						},
-						"selection":
-						[
-							[
-								855,
-								855
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"auto_complete_commit_on_tab": false,
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": -1,
-							"bracket_highlighter.clone_locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
 							},
-							"bracket_highlighter.clone_regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content"
-							],
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content"
-							],
-							"caret_style": "blink",
-							"color_scheme": "Packages/TerminalView/TerminalView.hidden-tmTheme",
-							"default_dir": "/home/ash/Desktop/django_unleashed/projects/pro1",
-							"draw_centered": false,
-							"draw_indent_guides": false,
-							"draw_white_space": "none",
-							"git_gutter_is_enabled": false,
-							"gutter": false,
-							"highlight_line": false,
-							"scroll_past_end": false,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"terminal_view": true,
-							"terminal_view_activate_args":
-							{
-								"cmd": "/bin/bash -l",
-								"cwd": "/home/ash/Desktop/django_unleashed/projects/pro1",
-								"keep_open": false,
-								"syntax": null,
-								"title": "Terminal"
-							},
-							"terminal_view_last_cursor_pos":
-							[
-								12,
-								15
-							],
-							"terminal_view_scroll": null,
-							"word_wrap": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 2,
-			"sheets":
-			[
-				{
-					"buffer": 1,
-					"file": "organizer/models.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2176,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								17,
-								17
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": -1,
-							"bracket_highlighter.clone_locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.clone_regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content"
-							],
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content"
-							],
-							"git_gutter_is_enabled": false,
-							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "organizer/templates/organizer/startup_list.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 552,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								384,
-								384
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": -1,
-							"bracket_highlighter.clone_locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.clone_regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content"
-							],
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content"
-							],
-							"color_scheme": "Packages/InactivePanes/Packages/Base16 Color Schemes/Themes/base16-monokai.tmTheme",
-							"git_gutter_is_enabled": false,
-							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "organizer/urls.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1427,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								925,
-								925
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": -1,
-							"bracket_highlighter.clone_locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.clone_regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content"
-							],
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										1425,
-										1426
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/square_bracket.png",
-										"region.bluish"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										110,
-										111
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content"
-							],
-							"git_gutter_is_enabled": false,
-							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 4,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 980,
-						"regions":
-						{
-							"12,23":
+							"8,0":
 							{
 								"flags": 272,
 								"regions":
 								[
 									[
-										863,
-										907
+										640,
+										662
 									]
 								],
-								"scope": "terminalview.black_magenta"
-							},
-							"2,19":
-							{
-								"flags": 272,
-								"regions":
-								[
-									[
-										0,
-										0
-									]
-								],
-								"scope": "terminalview.black_green"
+								"scope": "terminalview.black_cyan"
 							}
 						},
 						"selection":
 						[
 							[
-								910,
-								910
+								1042,
+								1042
 							]
 						],
 						"settings":
 						{
+							"SL.23.region_keys":
+							[
+							],
 							"auto_complete": false,
 							"auto_complete_commit_on_tab": false,
 							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone": 23,
 							"bracket_highlighter.clone_locations":
 							{
 								"close":
@@ -1435,6 +1570,16 @@
 							},
 							"bracket_highlighter.clone_regions":
 							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
@@ -1445,6 +1590,11 @@
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
@@ -1460,26 +1610,6 @@
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
@@ -1489,7 +1619,12 @@
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
-								"bh_regex_content"
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
 							],
 							"bracket_highlighter.locations":
 							{
@@ -1508,6 +1643,16 @@
 							},
 							"bracket_highlighter.regions":
 							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
@@ -1518,6 +1663,11 @@
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
@@ -1533,26 +1683,6 @@
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
@@ -1562,12 +1692,16 @@
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
-								"bh_regex_content"
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
 							],
 							"caret_style": "blink",
 							"color_scheme": "Packages/TerminalView/TerminalView.hidden-tmTheme",
 							"default_dir": "/home/ash/Desktop/django_unleashed/projects/pro1",
-							"default_scheme": "Packages/TerminalView/TerminalView.hidden-tmTheme",
 							"draw_centered": false,
 							"draw_indent_guides": false,
 							"draw_white_space": "none",
@@ -1588,7 +1722,7 @@
 							"terminal_view_last_cursor_pos":
 							[
 								13,
-								0
+								2
 							],
 							"terminal_view_scroll": null,
 							"word_wrap": false
@@ -1597,7 +1731,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -1682,8 +1816,72 @@
 		"selected_items":
 		[
 			[
+				"mode",
+				"organizer/models.py"
+			],
+			[
+				"model",
+				"organizer/models.py"
+			],
+			[
+				"mi",
+				"organizer/migrations/0002_auto_20180512_0442.py"
+			],
+			[
+				"",
+				"organizer/migrations/0003_auto_20180512_0204.py"
+			],
+			[
+				"004",
+				"organizer/migrations/0004_0004sdada.py"
+			],
+			[
+				"view",
+				"blog/views.py"
+			],
+			[
+				"views",
+				"organizer/views.py"
+			],
+			[
+				"utils",
+				"organizer/utils.py"
+			],
+			[
 				"url",
-				"organizer/urls.py"
+				"blog/urls.py"
+			],
+			[
+				"mdoel",
+				"organizer/models.py"
+			],
+			[
+				"models",
+				"organizer/models.py"
+			],
+			[
+				"0003",
+				"organizer/migrations/0003_auto_20180512_0204.py"
+			],
+			[
+				"pos",
+				"blog/templates/blog/post_form.html"
+			],
+			[
+				"sett",
+				"pro1/settings.py"
+			],
+			[
+				"psot",
+				"blog/templates/blog/post_detail.html"
+			],
+			[
+				"util",
+				"organizer/utils.py"
+			],
+			[
+				"tes",
+				"organizer/templates/organizer/startup_list.html"
 			],
 			[
 				"statr",
@@ -1694,16 +1892,8 @@
 				"blog/models.py"
 			],
 			[
-				"model",
-				"organizer/models.py"
-			],
-			[
 				"urls",
 				"organizer/urls.py"
-			],
-			[
-				"view",
-				"organizer/views.py"
 			],
 			[
 				"startli",
@@ -1714,20 +1904,12 @@
 				"organizer/templates/organizer/tag_detail.html"
 			],
 			[
-				"util",
-				"organizer/utils.py"
-			],
-			[
 				"startup",
 				"organizer/templates/organizer/startup_detail.html"
 			],
 			[
 				"vei",
 				"blog/views.py"
-			],
-			[
-				"views",
-				"organizer/views.py"
 			],
 			[
 				"postli",
@@ -1774,10 +1956,6 @@
 				"organizer/views.py"
 			],
 			[
-				"mode",
-				"organizer/models.py"
-			],
-			[
 				"forms",
 				"blog/forms.py"
 			],
@@ -1794,10 +1972,6 @@
 				"organizer/views.py"
 			],
 			[
-				"models",
-				"blog/models.py"
-			],
-			[
 				"startupde",
 				"organizer/templates/organizer/startup_detail.html"
 			],
@@ -1812,10 +1986,6 @@
 			[
 				"post",
 				"blog/templates/blog/post_form.html"
-			],
-			[
-				"sett",
-				"pro1/settings.py"
 			],
 			[
 				"tagfomr",
@@ -1946,11 +2116,11 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 2,
 	"settings":
 	{
 	},
-	"show_minimap": true,
+	"show_minimap": false,
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
