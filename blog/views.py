@@ -22,10 +22,10 @@ class PostCreate(View):
     form_class = PostForm
     template_name = 'blog/post_form.html'
 
-    def get(request):
+    def get(self, request):
         return (request, self.template_name, {'form': self.form_class()})
 
-    def post(request):
+    def post(self, request):
         bound_data = self.form_class(request.POST)
         if bound_data.is_valid():
             return redirect(bound_data.save())
