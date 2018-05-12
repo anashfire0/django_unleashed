@@ -1,0 +1,16 @@
+{% extends parent_template|default:"blog/base_blog.html" %}
+
+{% block title %}
+	{{ block.super }} - post create
+{% endblock title %}
+
+{% block content %}
+	<div>
+		<div>
+			<form action="{% url 'blog_post_create' %}" method="post"></form>
+			{% csrf_token %}
+			{{ form.as_p }}
+			<button type="submit">Create Blog Post</button>
+		</div>
+	</div>
+{% endblock content %}

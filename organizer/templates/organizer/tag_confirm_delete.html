@@ -1,0 +1,18 @@
+{% extends parent_template|default:"organizer/base_organizer.html" %}
+
+{% block title %}
+	{{ block.super }} - tag delete
+{% endblock title %}
+
+{% block content %}
+	<div>
+			<div>
+				<form action="{{ tag.get_delete_url }}" method="post">
+					{% csrf_token %}
+					<p>Are you sure you want to delete <em>{{ tag.name }}</em>?</p>
+					<a href="{{ tag.get_absolute_url }}">cancel</a>
+					<button type="submit">delete tag</button>
+				</form>
+			</div>
+		</div>	
+{% endblock content %}
