@@ -14,9 +14,9 @@ class Post(models.Model):
     slug = models.SlugField('Slug', unique_for_month='pub_date')
     text = models.TextField('Text')
     pub_date = models.DateField('Published Date', auto_now_add=True)
-    tags = models.ManyToManyField(Tag, related_name='blog_posts')
+    tags = models.ManyToManyField(Tag, blank=True, related_name='blog_posts')
     startups = models.ManyToManyField(
-        StartUp, related_name='blog_posts',)
+        StartUp, related_name='blog_posts',blank=True,)
 
     def __str__(self):
         return f'{self.title} on {self.pub_date:%Y-%m-%d}'

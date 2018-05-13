@@ -6,6 +6,7 @@ from django.views.generic import View
 from .forms import TagForm, StartUpForm, NewsLinkForm
 from .utils import ObjectCreateMixin, ObjectUpdateMixin, ObjectDeleteMixin
 from django.urls import reverse_lazy
+from django.core.paginator import Paginator
 
 
 def tag_list(request):
@@ -28,14 +29,25 @@ def tag_detail(request, slug):
     return render(request, 'organizer/tag_detail.html', {'tag': tag})
 
 
-def startup_list(request):
-    return render(request, 'organizer/startup_list.html', {'startup_list': StartUp.objects.all()})
+class StartUpList(View):
+    template_name = 'organizer/startup_list.html'
+    model = StartUp
+    paginate_by = 5
+    model = StartUp
+
+    def get(self, request):
+        paginator = Paginator(self.model.objects.all(), self.paginate_by)
+        page = paginator.page(1)
+        return render(request, self.template_name, {'startup_list': page,
+            'paginator': paginator, 'is_paginated': page.has_other_pages()})
 
 
-def startup_detail(request, slug):
-    startup = get_object_or_404(StartUp, slug__iexact=slug)
-    return render(request, 'organizer/startup_detail.html', {'startup': startup})
+class StartUpDetail(View):
+    template_name = 'organizer/startup_detail.html'
 
+    def get(self, request, slug):
+        obj = get_object_or_404(StartUp, slug__iexact=slug)
+        return render(request, self.template_name, {'startup': obj})
 # def tag_create(request):
 #     if request.method == 'POST':
 #         form = TagForm(request.POST)

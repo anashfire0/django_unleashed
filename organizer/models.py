@@ -9,7 +9,7 @@ class Tag(models.Model):
 
     name = models.CharField('Name', max_length=50, db_index=True)
     slug = models.SlugField('Slug', unique=True,
-                            help_text='Enter the <slug></slug>')
+                            help_text='Enter the slug')
 
     def get_absolute_url(self):
         return reverse('organizer_tag_detail', args=[self.slug])

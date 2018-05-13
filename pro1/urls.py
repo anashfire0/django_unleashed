@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('organizer/', include('organizer.urls')),
     path('blog/', include('blog.urls')),
-    path('', lambda request: HttpResponseRedirect(reverse('blog_post_list')))
+    path('', lambda request: HttpResponseRedirect(reverse('blog_post_list'))),
     # path('', lambda request: redirect('blog_post_list'))
+    path('contact/', include('contact.urls')),
 ]
