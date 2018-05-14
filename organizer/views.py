@@ -6,7 +6,7 @@ from django.views.generic import View
 from .forms import TagForm, StartUpForm, NewsLinkForm
 from .utils import ObjectCreateMixin, ObjectUpdateMixin, ObjectDeleteMixin
 from django.urls import reverse_lazy
-from django.core.paginator import Paginator
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
 
 def tag_list(request):
@@ -33,13 +33,34 @@ class StartUpList(View):
     template_name = 'organizer/startup_list.html'
     model = StartUp
     paginate_by = 5
+    page_kwarg = 'page'
     model = StartUp
 
     def get(self, request):
         paginator = Paginator(self.model.objects.all(), self.paginate_by)
-        page = paginator.page(1)
+        # page_number = request.GET.get(self.page_kwarg, 1)
+        page_number = request.GET.get(self.page_kwarg,)
+        try:
+            page = paginator.page(page_number)
+        except PageNotAnInteger:
+            page = paginator.page(1)
+        except EmptyPage:
+            page = paginator.page(paginator.num_pages)
+
+        if page.has_previous():
+            prev_url = f'?{self.page_kwarg}={page.previous_page_number()}'
+        else:
+            prev_url = None
+        if page.has_next():
+            next_url = f'?{self.page_kwarg}={page.next_page_number()}'
+        else:
+            next_url = None
+        print(str(request.GET).center(500, '%'))
         return render(request, self.template_name, {'startup_list': page,
-            'paginator': paginator, 'is_paginated': page.has_other_pages()})
+                                                    'paginator': paginator,
+                                                    'is_paginated': page.has_other_pages(),
+                                                    'previous_page_url':prev_url,
+                                                    'next_page_url':next_url})
 
 
 class StartUpDetail(View):

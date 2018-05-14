@@ -21,10 +21,10 @@
 			{% if is_paginated %}
 			<ul>
 					<li> {{ startup_list.number }} of {{ paginator.num_pages }}</li>	{% if startup_list.has_previous %}
-						<li><a href="?page={{ startup_list.previous_page_number }}">Previous</a></li>	
+						<li><a href="{{ previous_page_url }}">Previous</a></li>	
 					{% endif %}	
 					{% if startup_list.has_next %}
-						<li><a href="?page={{ startup_list.next_page_number }}">Next</a></li>	
+						<li><a href="{{ next_page_url }}">Next</a></li>	
 					{% endif %}
 			</ul>
 			{% endif %}
