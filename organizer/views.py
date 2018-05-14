@@ -45,7 +45,7 @@ class TagPageList(View):
                 ))
         else:
             prev_url = None
-         if page.has_next():
+        if page.has_next():
             next_url = reverse(
                 'organizer_tag_page',
                 args=(
