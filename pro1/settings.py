@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'blog',
     'django_extensions',
     'contact',
+    'core',
 ]
 
 MIDDLEWARE = [

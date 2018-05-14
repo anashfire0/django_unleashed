@@ -14,10 +14,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include, reverse
+from django.urls import path, re_path, include, reverse
 from organizer import views
 from django.shortcuts import redirect
 from django.http import HttpResponseRedirect
+from django.contrib.flatpages import urls as flatpages_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,4 +27,6 @@ urlpatterns = [
     path('', lambda request: HttpResponseRedirect(reverse('blog_post_list'))),
     # path('', lambda request: redirect('blog_post_list'))
     path('contact/', include('contact.urls')),
+    re_path(r'^', include(flatpages_urls)),
+    # path('', include(flatpages_urls)),
 ]

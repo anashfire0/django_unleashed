@@ -4,7 +4,9 @@ from .models import Tag, StartUp, NewsLink
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic import View
 from .forms import TagForm, StartUpForm, NewsLinkForm
-from .utils import ObjectCreateMixin, ObjectUpdateMixin, ObjectDeleteMixin
+from .utils import (
+    ObjectCreateMixin, ObjectUpdateMixin, ObjectDeleteMixin,
+    DetailView)
 from django.urls import reverse_lazy, reverse
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
@@ -66,17 +68,29 @@ class TagPageList(View):
             request, self.template_name, context)
 
 
-def tag_detail(request, slug):
-    print(str(type(request)).center(300, '|'))
-    # try
-    #     tag = Tag.objects.get(slug__iexact='hi')
-    # except Tag.DoesNotExist:
-    #     raise Http404
-    tag = get_object_or_404(Tag, slug__iexact=slug)
-    # template = loader.get_template('organizer/tag_detail.html')
-    # rendered_template = template.render({'tag':tag})
-    # return HttpResponse(rendered_template)
-    return render(request, 'organizer/tag_detail.html', {'tag': tag})
+# def tag_detail(request, slug):
+#     print(str(type(request)).center(300, '|'))
+#     # try
+#     #     tag = Tag.objects.get(slug__iexact='hi')
+#     # except Tag.DoesNotExist:
+#     #     raise Http404
+#     tag = get_object_or_404(Tag, slug__iexact=slug)
+#     # template = loader.get_template('organizer/tag_detail.html')
+#     # rendered_template = template.render({'tag':tag})
+#     # return HttpResponse(rendered_template)
+#     return render(request, 'organizer/tag_detail.html', {'tag': tag})
+
+
+class TagDetail(DetailView):
+    model = Tag
+    template_name = 'organizer/tag_detail.html'
+    context_object_name = 'tag'
+
+
+class StartUpDetail(DetailView):
+    template_name = 'organizer/startup_detail.html'
+    model = StartUp
+    context_object_name = 'startup'
 
 
 class StartUpList(View):
@@ -113,12 +127,6 @@ class StartUpList(View):
                                                     'next_page_url': next_url})
 
 
-class StartUpDetail(View):
-    template_name = 'organizer/startup_detail.html'
-
-    def get(self, request, slug):
-        obj = get_object_or_404(StartUp, slug__iexact=slug)
-        return render(request, self.template_name, {'startup': obj})
 # def tag_create(request):
 #     if request.method == 'POST':
 #         form = TagForm(request.POST)

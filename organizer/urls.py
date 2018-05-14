@@ -8,7 +8,7 @@ urlpatterns = [
     re_path(r'^tag/create/$', views.TagCreate.as_view(),
             name='organizer_tag_create'),
     re_path(r'^tag/(?P<slug>[\w\-]+)/$',
-            views.tag_detail, name='organizer_tag_detail'),
+            views.TagDetail.as_view(), name='organizer_tag_detail'),
     re_path(r'^tag/(?P<slug>[\w\-]+)/delete/$',
             views.TagDelete.as_view(), name='organizer_tag_delete'),
     re_path(r'^startup/$', views.StartUpList.as_view(), name='organizer_startup_list'),

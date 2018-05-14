@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 {% load static %}
+{% load flatpages %}
+{% get_flatpages as flatpages %}
 	<html lang="en">
 	<head>
 			<meta charset="UTF-8">
@@ -19,6 +21,11 @@
 								<li><a href="{% url 'organizer_startup_list' %}">Startups</a></li>
 								<li><a href="{% url 'organizer_tag_list' %}">Tags</a></li>
 								<li><a href="{% url 'contact' %}">contact</a></li>
+								{% for page in flatpages %}
+								<li>
+									<a href="{{ page.get_absolute_url }}">{{ page.title|title }}</a>	
+								</li>
+								{% endfor %}
 							</ul>
 			</nav>			
 			<main>
