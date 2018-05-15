@@ -19,12 +19,14 @@ from organizer import views
 from django.shortcuts import redirect
 from django.http import HttpResponseRedirect
 from django.contrib.flatpages import urls as flatpages_urls
+from django.views.generic import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('organizer/', include('organizer.urls')),
     path('blog/', include('blog.urls')),
-    path('', lambda request: HttpResponseRedirect(reverse('blog_post_list'))),
+    # path('', lambda request: HttpResponseRedirect(reverse('blog_post_list'))),
+    path('', RedirectView.as_view(pattern_name='blog_post_list', permanent=True)),
     # path('', lambda request: redirect('blog_post_list'))
     path('contact/', include('contact.urls')),
     re_path(r'^', include(flatpages_urls)),

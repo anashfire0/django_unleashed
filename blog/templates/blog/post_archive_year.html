@@ -1,0 +1,14 @@
+{% extends parent_template|default:"blog/base_blog.html" %}
+
+{% block title %}
+	{{ block.super }} | {{ year|date:"Y" }} Posts
+{% endblock title %}
+
+{% block content %}
+	<h3>Archives by month</h3>	
+	{% for m in date_list %}
+		<li>
+			<a href="">{{ m|date:"F Y" }}</a>
+		</li>
+	{% endfor %}
+{% endblock content %}

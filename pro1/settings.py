@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+from .log_filters import ManagementFilter
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -140,3 +141,33 @@ MANAGERS = (
 )
 
 SITE_ID = 1
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers':{
+        'console':{
+            'class':'logging.StreamHandler',
+        }
+    },
+    'formatters':{
+        'verbose': {
+            'format': "[%(asctime)s] %(levelname)s "
+                      "[%(name)s:%(lineno)s] %(message)s",
+            'datefmt': "%Y-%b-%d %H:%M:%S"
+            },
+        },
+    'filters':{
+        'remove_migration_sql':{
+            '()': ManagementFilter,
+        }
+    },
+    'loggers':{
+        'django':{
+            'handlers':['console'],
+            'level': 'DEBUG',
+            'formatter': 'verbose',
+        }
+    },
+}
+

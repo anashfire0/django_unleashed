@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Post
-from django.views.generic import View
+from django.views.generic import View, CreateView as OrigCreateView, ListView as OrigListView, YearArchiveView 
 from .forms import PostForm
 # Create your views here.
 
@@ -65,3 +65,7 @@ class PostDelete(View):
         post = get_object_or_404(Post, year=year, month=month, slug__iexact=slug)
         post.delete()
         return redirect('blog_post_list')
+
+class PostArchiveYear(YearArchiveView):
+    model = Post
+    date_field = 'pub_date'

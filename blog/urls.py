@@ -18,4 +18,6 @@ urlpatterns = [
             r'(?P<month>\d{1,2})/'
             r'(?P<slug>[\w\-]+)/'
             r'delete/$',views.PostDelete.as_view(), name='blog_post_delete'),
+    re_path(r'^(?P<year>\d{4})$/'
+            r'delete/$',views.PostArchiveYear.as_view(), name='blog_archive_year'),
 ]
