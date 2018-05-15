@@ -68,7 +68,7 @@ class NewsLink(models.Model):
         return self.startup.get_absolute_url()
 
     def get_update_url(self):
-        return reverse('organizer_newslink_update', args=[self.pk])
+       return reverse('organizer_newslink_update', args=[self.pk])
 
     def get_delete_url(self):
         return reverse('organizer_newslink_delete', args=[self.pk])

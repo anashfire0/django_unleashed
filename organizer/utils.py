@@ -1,9 +1,10 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import View
 from django.db.models import Model
-from djanog.core.exceptions import ImproperlyConfigured
+from django.core.exceptions import ImproperlyConfigured
 
-class ObjectCreateMixin:
+
+class CreateView(View):
     form_class = None
     template_name = ''
 
@@ -32,6 +33,7 @@ class ObjectUpdateMixin:
     def post(self, request, slug):
         obj = get_object_or_404(self.model, slug__iexact=slug)
         bound_form = self.form_class(request.POST, instance=obj)
+        print(str(request.POST).center(600,'$'))
         if bound_form.is_valid():
             return redirect(bound_form.save())
         else:
@@ -52,10 +54,11 @@ class ObjectDeleteMixin:
         obj.delete()
         return HttpResponseRedirect(self.success_url)
 
+
 class DetailView(View):
     model = None
     context_object_name = ''
-    template_name = str()
+    template_name = ''
     template_name_suffix = '_detail'
 
     def get(self, request, **kwargs):
@@ -64,6 +67,16 @@ class DetailView(View):
         template_name = self.get_templates_name()
         context = self.get_context_data()
         return render(request, template_name, context)
+
+    def get_object(self):
+        slug = self.kwargs.get('slug')
+        if slug is None:
+            raise AttributeError(f'{self.__class__.__name__} expects'
+                                 ' {slug} from URL pattern.')
+        if self.model:
+            return get_object_or_404(self.model, slug__iexact=slug)
+        else:
+            raise ImproperlyConfigured(f'{self.__class__.__name__} needs "model" attribute')
 
     def get_context_object_name(self):
         if self.context_object_name:
@@ -75,7 +88,7 @@ class DetailView(View):
 
     def get_templates_name(self):
         if self.template_name:
-            return template_name
+            return self.template_name
         return f'{self.object._meta.app_label}/{self.object._meta.model_name}{self.template_name_suffix}.html'
 
     def get_context_data(self):
@@ -85,13 +98,3 @@ class DetailView(View):
             if context_object_name:
                 context[context_object_name] = self.object
         return context
-
-    def get_object(self):
-        slug = self.kwargs.get('slug')
-        if slug is None:
-            raise AttributeError(f'{self.__class__.__name__} expects'
-                ' {slug} from URL pattern.')
-        if self.model:
-            return get_object_or_404(self.model, slug__iexact=slug)
-        else:
-            raise ImproperlyConfigured(f'{self.__class__.__name__} needs "model" attribute')

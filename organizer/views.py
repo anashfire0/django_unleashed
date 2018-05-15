@@ -2,10 +2,10 @@ from django.template import loader, Context, Template
 from django.http import HttpResponse, Http404
 from .models import Tag, StartUp, NewsLink
 from django.shortcuts import render, get_object_or_404, redirect
-from django.views.generic import View
+from django.views.generic import View, DetailView as OrigDetailView
 from .forms import TagForm, StartUpForm, NewsLinkForm
 from .utils import (
-    ObjectCreateMixin, ObjectUpdateMixin, ObjectDeleteMixin,
+    CreateView, ObjectUpdateMixin, ObjectDeleteMixin,
     DetailView)
 from django.urls import reverse_lazy, reverse
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
@@ -81,10 +81,12 @@ class TagPageList(View):
 #     return render(request, 'organizer/tag_detail.html', {'tag': tag})
 
 
-class TagDetail(DetailView):
-    model = Tag
+class TagDetail(OrigDetailView):
     template_name = 'organizer/tag_detail.html'
     context_object_name = 'tag'
+
+    def get_queryset(self):
+        return Tag.objects.all()
 
 
 class StartUpDetail(DetailView):
@@ -138,12 +140,12 @@ class StartUpList(View):
 #     return render(request, 'organizer/tag_form.html', {'form': form})
 
 
-class TagCreate(ObjectCreateMixin, View):
+class TagCreate(CreateView, View):
     form_class = TagForm
     template_name = 'organizer/tag_form.html'
 
 
-class StartUpCreate(ObjectCreateMixin, View):
+class StartUpCreate(CreateView, View):
     form_class = StartUpForm
     template_name = 'organizer/startup_form'
 
@@ -154,7 +156,7 @@ class StartUpDelete(ObjectDeleteMixin, View):
     template_name = 'organizer/startup_confirm_delete.html'
 
 
-class NewsLinkCreate(ObjectCreateMixin, View):
+class NewsLinkCreate(CreateView, View):
     form_class = NewsLinkForm
     template_name = 'organizer/newslink_form.html'
 
