@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 import os
 from .log_filters import ManagementFilter
+from django.urls import reverse_lazy
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -45,6 +46,7 @@ INSTALLED_APPS = [
     'django_extensions',
     'contact',
     'core',
+    'user',
 ]
 
 MIDDLEWARE = [
@@ -156,7 +158,7 @@ LOGGING = {
                       "[%(name)s:%(lineno)s] %(message)s",
             'datefmt': "%Y-%b-%d %H:%M:%S"
             },
-        },
+        }   ,
     'filters':{
         'remove_migration_sql':{
             '()': ManagementFilter,
@@ -171,3 +173,7 @@ LOGGING = {
     },
 }
 
+
+LOGIN_REDIRECT_URL = reverse_lazy('blog_post_list')
+LOGIN_URL = reverse_lazy('user:login')
+LOGOUT_URL = reverse_lazy('user:logout')

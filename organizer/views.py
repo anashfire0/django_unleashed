@@ -9,6 +9,7 @@ from .utils import (
     DetailView)
 from django.urls import reverse_lazy, reverse
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+from django.contrib.auth.decorators import method_decorator, login_required
 
 
 # def tag_list(request):
@@ -113,6 +114,7 @@ class StartUpList(View):
         except EmptyPage:
             page = paginator.page(paginator.num_pages)
 
+        print(str(request.path).center(600,'%'))
         if page.has_previous():
             prev_url = f'?{self.page_kwarg}={page.previous_page_number()}'
         else:
@@ -143,6 +145,10 @@ class StartUpList(View):
 class TagCreate(CreateView, View):
     form_class = TagForm
     template_name = 'organizer/tag_form.html'
+
+    @method_decorator(login_required)
+    def dispatch(self, request, *args, **kwargs):
+        return super().dispatch(*args, **kwargs)
 
 
 class StartUpCreate(CreateView, View):

@@ -26,6 +26,11 @@
 									<a href="{{ page.get_absolute_url }}">{{ page.title|title }}</a>	
 								</li>
 								{% endfor %}
+								{% if user.is_authenticated %}
+								<li><a href="{% url 'user:logout'	%}">log out</a></li>
+								{% else %}
+								<li><a href="{% url 'user:login' %}?next={{ request.path }} ">Log in</a></li>	
+								{% endif %}
 							</ul>
 			</nav>			
 			<main>

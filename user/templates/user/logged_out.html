@@ -1,0 +1,10 @@
+{% extends parent_template|default:"base.html" %}
+
+{% block title %}
+	{{ block.super }} | Logged out
+{% endblock title %}
+
+{% block content %}
+	<p>You've successfully logged out</p>
+	{% include "user/login_form.html" with login_button="Log Back In" %}
+{% endblock content %}

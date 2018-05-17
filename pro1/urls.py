@@ -29,6 +29,7 @@ urlpatterns = [
     path('', RedirectView.as_view(pattern_name='blog_post_list', permanent=True)),
     # path('', lambda request: redirect('blog_post_list'))
     path('contact/', include('contact.urls')),
+    path('user/', include('user.urls')),
     re_path(r'^', include(flatpages_urls)),
     # path('', include(flatpages_urls)),
 ]

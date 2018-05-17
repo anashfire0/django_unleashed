@@ -9,6 +9,7 @@ class Post(models.Model):
         verbose_name = 'blog post'
         ordering = ['-pub_date', 'title']
         get_latest_by = 'pub_date'
+        permissions = (('view_future_post', 'Can view unpublished Post'),)
 
     title = models.CharField('Title', max_length=264)
     slug = models.SlugField('Slug', unique_for_month='pub_date')
